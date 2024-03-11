@@ -10,6 +10,7 @@ Source code for paper "[Truth-Aware Context Selection: Mitigating the Hallucinat
 ## 🔥 Models Download
 
 We provide trained classifiers for truth detection! 
+
 **TruthfulQA Truth Detection Classifier**: [Llama 2-Chat-7B](https://). [Honest Llama](https://).
 **ConflictQA Truth Detection Classifier**: [Llama 2-Chat-7B](https://).
 
@@ -29,7 +30,8 @@ We provide trained classifiers for truth detection!
 
 ```bash
 git clone https://github.com/ictnlp/TACS.git
-cd TruthX
+cd TACS
+export ROOT=pwd
 ```
 
 - Environment requirements: Python 3.9, Pytorch 1.13.1.
@@ -40,7 +42,7 @@ pip install -r requirements.txt
 
 ## Quick Starts
 
-- **GUI interaction**: We provide a GUI interface to intuitively compare the effect of TACS on LLM. You can click on the examples at the bottom of the page to quickly fill in the 'Question' and 'Information'. After clicking the 'Submit' button, you will see the results of the truth detection on the right, and get the results generated without (left-bottom) or using TACS (right-bottom) respectively.
+- **GUI interaction**: We provide a GUI interface to intuitively compare the effect of TACS on LLM. You can click on the examples at the bottom of the page to quickly fill in the 'Question' and 'Information'. After clicking the 'Submit' button, you will see the results of the truth detection on the right, and get the results generated without (left-bottom) or using (right-bottom) TACS respectively.
 
 <video width="640" height="360" controls>
   <source src="asset/TACS_demo.mp4" type="video/mp4">
@@ -59,8 +61,6 @@ pip install -r requirements.txt
 Run the following scripts step by step, and you can interact with TACS in your browser.
 
 ```bash
-ROOT=path_to_TACS_dir
-
 cd $ROOT/webui
 CUDA_VISIBLE_DEVICES=0,1 python webui.py\
     --model_name ${path_to_Llama-2-7b-chat}\
@@ -123,8 +123,6 @@ Metrics can be find at [`probabilistic_multiple_choice_results`](./tfqa/probabil
   - download [truth detection classifiers](), and save them to `$ROOT/conflictqa/svm`
 ```shell
 # Generation
-ROOT=path_to_TACS_dir
-
 cd $ROOT/conflictqa
 export model_path={path_to_llm}
 export CUDA_VISIBLE_DEVICES=0,1,2,3
