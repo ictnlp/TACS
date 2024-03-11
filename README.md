@@ -6,6 +6,16 @@ Source code for paper "[Truth-Aware Context Selection: Mitigating the Hallucinat
 
 **Truth-Aware Context Selection (TACS)** is a method of selecting context based on its truthfulness, which discards the unreal parts of the context and retains the truthful parts, protecting the LLMs from being misled by untruthful context, thus avoiding the generation of hallucinations. TACS first performs truth detection on the context, and then constructs the corresponding attention mask according to the truthfulness of each position to filter the context. 
 
+> [!Note]
+> In our experiments, TACS can significantly alleviate the hallucination caused by untruthful context and improve the LLMs' adaptability in the face of information interference. 
+
+<div  align="center">   
+  <img src="./assets/TACS_results.png" alt="img" width="100%" />
+</div>
+<p align="center">
+  Truthful information Acceptance Rate (TA Rate), Untruthful information Resistance Rate (UR Rate) and Disturbance Adaptation Rate on TruthfulQA and ConflictQA.
+</p>
+
 
 ## 🔥 Models Download
 
@@ -15,6 +25,7 @@ We provide trained classifiers for truth detection!
 
 **ConflictQA Truth Detection Classifiers**: [Classifiers for Llama 2-Chat-7B](https://).
 
+With these classifiers, TACS can perform truth (hallucination) detection on the contextual information based on the internal representations, evaluating the truthfulness of each location.
 
 ## Overview
 
@@ -51,7 +62,7 @@ pip install -r requirements.txt
 
 
 <p align="center">
-  Side-by-side comparison of Llama 2-Chat 7B and Llama 2-Chat 7B+TACS
+ TACS firstly conduct truth detection on the contextual information, and then construct the corresponding attention mask according to the truthfulness of each position to filter the context.
 </p>
 
 
