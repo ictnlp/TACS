@@ -7,7 +7,7 @@ Source code for paper "[Truth-Aware Context Selection: Mitigating the Hallucinat
 **Truth-Aware Context Selection (TACS)** is a method of selecting context based on its truthfulness, which discards the unreal parts of the context and retains the truthful parts, protecting the LLMs from being misled by untruthful context, thus avoiding the generation of hallucinations. TACS first performs truth detection on the context, and then constructs the corresponding attention mask according to the truthfulness of each position to filter the context. 
 
 > [!Note]
-> In our experiments, TACS can significantly alleviate the hallucination caused by untruthful context and improve the LLMs' adaptability in the face of information interference. 
+> Experimental results shows that TACS can significantly alleviate the hallucination caused by untruthful context and improve the LLMs' adaptability in the face of information interference. More information can be found in the [paper]().
 
 <div  align="center">   
   <img src="./assets/TACS_results.png" alt="img" width="100%" />
