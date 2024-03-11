@@ -70,16 +70,16 @@ pip install -r requirements.txt
 > You can switch the truth detection granularity and adjust the classification threshold. Positions with scores above the threshold will be considered truthful.
 
 
-To interact with TACS in your browser, you should firstly download the [truth detection classifiers] and place them at $ROOT/tfqa/svm, and then run the following command:
+To interact with TACS in your browser, you should firstly download the [truth detection classifiers]() and place them at $ROOT/tfqa/svm, and then run the following command:
 
 ```bash
 cd $ROOT/webui
 CUDA_VISIBLE_DEVICES=0,1 python webui.py\
-    --model_name ${path_to_Llama-2-7b-chat}\
-    --token_svm_path ${path_to_token_level_classifier}\
-    --token_svm_acc ${path_to_token_level_classifier_acc}\
-    --sentence_svm_path ${path_to_sentence_level_classifier}\
-    --sentence_svm_acc ${path_to_sentence_level_classifier_acc}\
+    --model_name ${path_to_Llama-2-7b-chat}\ # e.g. Llama-2-7b-chat-hf
+    --token_svm_path ${path_to_token_level_classifier}\ # e.g. svm_single_evidence_Llama-2-7b-chat-hf_fold2.pt
+    --token_svm_acc ${path_to_token_level_classifier_acc}\ # e.g. acc_single_evidence_Llama-2-7b-chat-hf_fold2.pt
+    --sentence_svm_path ${path_to_sentence_level_classifier}\ # e.g. mean_svm_single_evidence_Llama-2-7b-chat-hf_fold2.pt
+    --sentence_svm_acc ${path_to_sentence_level_classifier_acc}\ # e.g. mean_acc_single_evidence_Llama-2-7b-chat-hf_fold2.pt
     --TACS_mode 'DEMO_token'
 ```
 
