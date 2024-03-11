@@ -11,9 +11,9 @@ Source code for paper "[Truth-Aware Context Selection: Mitigating the Hallucinat
 
 We provide trained classifiers for truth detection! 
 
-**TruthfulQA Truth Detection Classifier**: [Llama 2-Chat-7B](https://). [Honest Llama](https://).
+**TruthfulQA Truth Detection Classifiers**: [Classifiers for Llama 2-Chat-7B](https://). [Classifiers for Honest Llama](https://).
 
-**ConflictQA Truth Detection Classifier**: [Llama 2-Chat-7B](https://).
+**ConflictQA Truth Detection Classifiers**: [Classifiers for Llama 2-Chat-7B](https://).
 
 
 ## Overview
