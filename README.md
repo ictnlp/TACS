@@ -50,7 +50,6 @@ pip install -r requirements.txt
   Your browser does not support the video tag.
 </video>
 
-[![Video](./asset/TACS_demo.mp4)](./asset/TACS_demo.mp4)
 
 <p align="center">
   Side-by-side comparison of Llama 2-Chat 7B and Llama 2-Chat 7B+TACS
@@ -88,6 +87,7 @@ export CUDA_VISIBLE_DEVICES=0,1,2,3
 
 bash gmc_infer.sh
 ```
+Generation results can be find at `$ROOT/tfqa/generative_multiple_choice_results`. Our generation results are also provided in [`./tfqa/generative_multiple_choice_results`](./tfqa/generative_multiple_choice_results).
 
 - Evaluate using Llama 2-Chat 7B with TACS
 ```shell
@@ -105,7 +105,7 @@ export CUDA_VISIBLE_DEVICES=0,1,2,3
 bash opg_infer.sh
 ```
 
-Generation results can be find at `$ROOT/tfqa/open_ended_generation_results`. Our generation results are also provided in [`./open_ended_generation_results`](./tfqa/open_ended_generation_results).
+Generation results can be find at `$ROOT/tfqa/open_ended_generation_results`. Our generation results are also provided in [`./tfqa/open_ended_generation_results`](./tfqa/open_ended_generation_results).
 
 ### Probabilistic Multiple-Choice
 
@@ -117,7 +117,7 @@ export CUDA_VISIBLE_DEVICES=0,1,2,3
 
 bash mc_eval.sh
 ```
-Metrics can be find at [`probabilistic_multiple_choice_results`](./tfqa/probabilistic_multiple_choice_results).
+Metrics can be find at [`./tfqa/probabilistic_multiple_choice_results`](./tfqa/probabilistic_multiple_choice_results).
 
 ## ConflictQA Evaluation
 ### Generative Multiple-Choice
@@ -133,7 +133,7 @@ export CUDA_VISIBLE_DEVICES=0,1,2,3
 bash infer.sh
 ```
 
-Generation results can be find at `$ROOT/conflictqa/generative_multiple_choice_results`. Our generation results are also provided in [`./generative_multiple_choice_results`](./conflictqa/generative_multiple_choice_results).
+Generation results can be find at `$ROOT/conflictqa/generative_multiple_choice_results`. Our generation results are also provided in [`./conflictqa/generative_multiple_choice_results`](./conflictqa/generative_multiple_choice_results).
 
 - Evaluate using Llama 2-Chat 7B with TACS
 ```shell
