@@ -46,9 +46,11 @@ pip install -r requirements.txt
 - **GUI interaction**: We provide a GUI interface to intuitively compare the effect of TACS on LLM. You can click on the examples at the bottom of the page to quickly fill in the 'Question' and 'Information'. After clicking the 'Submit' button, you will see the results of the truth detection on the right, and get the results generated without (left-bottom) or using (right-bottom) TACS respectively.
 
 <video width="640" height="360" controls>
-  <source src="asset/TACS_demo.mp4" type="video/mp4">
+  <source src="./asset/TACS_demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+[![Video](./asset/TACS_demo.mp4)](./asset/TACS_demo.mp4)
 
 <p align="center">
   Side-by-side comparison of Llama 2-Chat 7B and Llama 2-Chat 7B+TACS
