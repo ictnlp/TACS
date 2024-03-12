@@ -21,9 +21,9 @@ Source code for paper "[Truth-Aware Context Selection: Mitigating the Hallucinat
 
 We provide trained classifiers for truth detection! 
 
-**TruthfulQA Truth Detection Classifiers**: [Classifiers for Llama 2-Chat-7B](https://). [Classifiers for Honest Llama](https://).
+**TruthfulQA Truth Detection Classifiers**: [Classifiers for Llama 2-Chat-7B](https://huggingface.co/ICTNLP/TACS_Truth_Detection_Classifiers/tree/main/tfqa_classifiers/svm_classifiers_for_Llama_2_chat_7B). [Classifiers for Honest Llama](https://huggingface.co/ICTNLP/TACS_Truth_Detection_Classifiers/tree/main/tfqa_classifiers/svm_classifiers_for_Honest_Llama).
 
-**ConflictQA Truth Detection Classifiers**: [Classifiers for Llama 2-Chat-7B](https://).
+**ConflictQA Truth Detection Classifiers**: [Classifiers for Llama 2-Chat-7B](https://huggingface.co/ICTNLP/TACS_Truth_Detection_Classifiers/tree/main/conflictqa_classifiers/svm_classifiers_for_Llama_2_chat_7B).
 
 With these classifiers, TACS can perform truth (hallucination) detection on the contextual information based on the internal representations, evaluating the truthfulness of each location.
 
@@ -70,7 +70,7 @@ pip install -r requirements.txt
 > You can switch the truth detection granularity and adjust the classification threshold. Positions with scores above the threshold will be considered truthful.
 
 
-To interact with TACS in your browser, you should firstly download the [truth detection classifiers]() and place them at $ROOT/tfqa/svm, and then run the following command:
+To interact with TACS in your browser, you should firstly download the [truth detection classifiers](https://huggingface.co/ICTNLP/TACS_Truth_Detection_Classifiers/tree/main/tfqa_classifiers/svm_classifiers_for_Llama_2_chat_7B) and place the models at $ROOT/tfqa/svm, and then run the following command:
 
 ```bash
 cd $ROOT/webui
@@ -88,7 +88,7 @@ CUDA_VISIBLE_DEVICES=0,1 python webui.py\
 ### Generative Multiple-Choice
 
 - Generate using Llama 2-Chat 7B with TACS
-  - download [truth detection classifiers](), and save them to `$ROOT/tfqa/svm`
+  - download [truth detection classifiers](https://huggingface.co/ICTNLP/TACS_Truth_Detection_Classifiers/tree/main/tfqa_classifiers/svm_classifiers_for_Llama_2_chat_7B), and save them to `$ROOT/tfqa/svm`
 ```shell
 # Generation
 cd $ROOT/tfqa
@@ -133,7 +133,7 @@ Metrics can be find at [`./tfqa/probabilistic_multiple_choice_results`](./tfqa/p
 ### Generative Multiple-Choice
 
 - Generate using Llama 2-Chat 7B with TACS
-  - download [truth detection classifiers](), and save them to `$ROOT/conflictqa/svm`
+  - download [truth detection classifiers](https://huggingface.co/ICTNLP/TACS_Truth_Detection_Classifiers/tree/main/conflictqa_classifiers/svm_classifiers_for_Llama_2_chat_7B), and save them to `$ROOT/conflictqa/svm`
 ```shell
 # Generation
 cd $ROOT/conflictqa
