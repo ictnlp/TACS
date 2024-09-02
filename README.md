@@ -157,13 +157,22 @@ Model weights and the inference code are released under The GNU General Public L
 If this repository is useful for you, please cite as:
 
 ```
-@misc{yu2024truthaware,
-      title={Truth-Aware Context Selection: Mitigating the Hallucinations of Large Language Models Being Misled by Untruthful Contexts}, 
-      author={Tian Yu and Shaolei Zhang and Yang Feng},
-      year={2024},
-      eprint={2403.07556},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{yu-etal-2024-truth,
+    title = "Truth-Aware Context Selection: Mitigating Hallucinations of Large Language Models Being Misled by Untruthful Contexts",
+    author = "Yu, Tian  and
+      Zhang, Shaolei  and
+      Feng, Yang",
+    editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+    booktitle = "Findings of the Association for Computational Linguistics ACL 2024",
+    month = aug,
+    year = "2024",
+    address = "Bangkok, Thailand and virtual meeting",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.findings-acl.645",
+    pages = "10862--10884",
+    abstract = "Although Large Language Models (LLMs) have demonstrated impressive text generation capabilities, they are easily misled by untruthful contexts provided by users or knowledge augmentation tools, leading to hallucinations. To alleviate LLMs from being misled by untruthful context and take advantage of knowledge augmentation, we propose Truth-Aware Context Selection (TACS), a lightweight method to adaptively recognize and mask untruthful context from the inputs. TACS begins by performing truth detection on the input context, leveraging the parameterized knowledge within the LLM. Subsequently, it constructs a corresponding attention mask based on the truthfulness of each position, selecting the truthful context and discarding the untruthful context. Additionally, we introduce a new evaluation metric, Disturbance Adaption Rate, to further study the LLMs{'} ability to accept truthful information and resist untruthful information.Experimental results indicate that TACS can effectively filter untruthful context and significantly improve the overall quality of LLMs{'} responses when presented with misleading information.",
 }
 ```
 
